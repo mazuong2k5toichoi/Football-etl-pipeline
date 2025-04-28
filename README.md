@@ -70,7 +70,7 @@ You can get access to this lineage by using   [Dagster ui](localhost:3001)
 
 ### 3.1 Git clone
 ```bash
-git clone https://github.com/lelouvincx/goodreads-elt-pipeline.git project
+git clone https://github.com/mazuong2k5toichoi/Football-etl-pipeline.git project
 cd project
 ```
 
