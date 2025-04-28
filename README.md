@@ -69,7 +69,12 @@ You can get access to this lineage by using   [Dagster ui](localhost:3001)
 - If using Windowns, install Linux on Windowns with WSL 
 
 ### 3.1 Git clone
+```bash
+git clone https://github.com/lelouvincx/goodreads-elt-pipeline.git project
+cd project
+```
 
+Download the csv dataset [here](https://www.kaggle.com/datasets/davidcariboo/player-scores), then place it in `football`
 ### 3.2 Setup local
 
 **#create docker**
