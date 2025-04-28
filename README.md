@@ -121,7 +121,7 @@ cp env.template .env
 **#set the foreign key constraints**
 
 `make to_mysql`
--then paste those lines on cli to set the foreign key.
+-then paste those lines in `load_data/mysql_load_foreign_key.sql` on cli to set the foreign key.
 
 ### 3.4 Create schema in PostgresSQL
 
