@@ -76,7 +76,18 @@ cd project
 
 Download the csv dataset [here](https://www.kaggle.com/datasets/davidcariboo/player-scores), then place it in `football`
 ### 3.2 Setup local
+**#create virtual env**
+```bash
+python3.9 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
+```bash
+# Create env file
+touch .env
+cp env.template .env
+```
 **#create docker**
 
 `make build`
