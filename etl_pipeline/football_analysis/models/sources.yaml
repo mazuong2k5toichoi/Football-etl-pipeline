@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: warehouse
+    schema: analysis
+    tables:
+      - name: players
+        description: "Player information"
+        columns:
+          - name: player_id
+            description: "Unique player identifier"
+      - name: transfer
+      - name: games
+      - name: clubs
+      - name: appearances
+
+
+

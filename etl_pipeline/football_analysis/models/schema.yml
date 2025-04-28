@@ -1,0 +1,144 @@
+version: 2
+
+models:
+  - name: players_model
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+
+  - name: mart_player_transfer_analysis
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+          
+  - name: goal_formation
+    description: "Analysis of goals, attendance, and most successful formations by season and competition"
+    columns:
+      - name: season
+        description: "Season identifier"
+        tests:
+          - not_null
+      
+      - name: name
+        description: "Competition name"
+        tests:
+          - not_null
+      
+      - name: total_goals
+        description: "Total number of goals scored in the competition/season"
+        tests:
+          - not_null
+      
+      - name: avg_attendance
+        description: "Average attendance at games in the competition/season"
+        tests:
+          - not_null
+      
+      - name: best_formation
+        description: "Formation with highest win rate in the competition/season"
+      
+      - name: best_formation_win_rate
+        description: "Win rate percentage for the best formation"
+  - name: club_win_analysis
+    description: "Analysis of club win records and win rates for 2023 and 2024 seasons"
+    columns:
+      - name: club_id
+        description: "Unique identifier for the club"
+        tests:
+          - not_null
+      
+      - name: club_name  
+        description: "Name of the club"
+        tests:
+          - not_null
+          
+      - name: season
+        description: "Season identifier (2023 or 2024)"
+        tests:
+          - not_null
+          
+      - name: manager_name
+        description: "Name of the club's manager for the season"
+          
+      - name: wins
+        description: "Number of wins by the club in the season"
+        tests:
+          - not_null
+          
+      - name: total_games
+        description: "Total number of games played by the club in the season"
+        tests:
+          - not_null
+          
+      - name: win_rate
+        description: "Win percentage for the club in the season"
+        tests:
+          - not_null
+  - name: leaderboard
+    description: "Football competition leaderboards by season (2021-2024) with points calculation"
+    columns:
+      - name: season
+        description: "Season identifier"
+        tests:
+          - not_null
+      
+      - name: competition_name
+        description: "Name of the competition"
+        tests:
+          - not_null
+      
+      - name: club_id
+        description: "Unique identifier for the club"
+        tests:
+          - not_null
+      
+      - name: club_name
+        description: "Name of the club"
+        tests:
+          - not_null
+      
+      - name: games_played
+        description: "Total number of games played by the club"
+        tests:
+          - not_null
+      
+      - name: wins
+        description: "Number of games won"
+        tests:
+          - not_null
+      
+      - name: draws
+        description: "Number of games drawn"
+        tests:
+          - not_null
+      
+      - name: losses
+        description: "Number of games lost"
+        tests:
+          - not_null
+      
+      - name: goals_for
+        description: "Total goals scored by the club"
+        tests:
+          - not_null
+      
+      - name: goals_against
+        description: "Total goals conceded by the club"
+        tests:
+          - not_null
+      
+      - name: goal_difference
+        description: "Goal difference (goals scored minus goals conceded)"
+        tests:
+          - not_null
+      
+      - name: points
+        description: "Total points (3 points per win, 1 point per draw)"
+        tests:
+          - not_null
+      
+      - name: position
+        description: "Club's position in the competition ranking (null for knockout stages)"
+        # Removed not_null test since this can be null for knockout stages
